@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amr Hefzy | Portfolio</title>
+<meta name="description" content="Amr Hefzy — Senior Business Analyst and ERP/GRP Functional Consultant. 13+ years delivering HR, Payroll, Finance and SCM implementations for enterprise and government clients in Saudi Arabia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1628'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23C9A24B' text-anchor='middle'%3EAH%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amr Hefzy | Senior Business Analyst & ERP/GRP Functional Consultant">
+<meta property="og:description" content="Turning business requirements into systems that go live. 13+ years of ERP/GRP implementations across 25+ enterprise and government clients in Saudi Arabia.">
+<meta property="og:image" content="amr-hefzy.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: formal, confident, quiet — a senior consultant's dossier
+   IDEA: an implementation roadmap — every section moves toward go-live
+   PICTURE: the delivery path from requirements to a gold go-live milestone
+   COLOUR and TYPE: deep navy fields, gold accent, ivory band; Playfair Display + Inter
+   LAYOUT: full-width bands, 1180px content, stacked on phones */
+:root{color-scheme:dark;--navy:#0A1628;--navy2:#0F2140;--line:#22365A;--gold:#C9A24B;--gold2:#E3C27A;--ink:#EEF1F6;--mute:#A9B4C7;--ivory:#F7F3EA;--ivink:#13213A}
+*{box-sizing:border-box;min-width:0}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--navy);color:var(--ink);font:16.5px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,4vw,44px);margin-bottom:12px}
+h3{font-size:21px}
+p{margin:0 0 12px}
+.wrap{max-width:1180px;margin:0 auto}
+.band{padding:clamp(56px,7vw,96px) max(5vw,18px)}
+.alt{background:var(--navy2)}
+.lead{color:var(--mute);max-width:640px;margin-bottom:36px}
+.gold{color:var(--gold)}
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:rgba(10,22,40,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,18px)}
+.logo{font-family:Cinzel,"Playfair Display",serif;font-weight:700;font-size:25px;letter-spacing:.04em;color:var(--gold);text-decoration:none;white-space:nowrap}
+.logo span{color:var(--gold)}
+.links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.links a{flex:none;text-decoration:none;color:var(--mute);font-size:14.5px;padding:10px 12px;border-radius:8px}
+.links a:hover,.links a.on{color:var(--ink);background:var(--navy2)}
+/* hero */
+.hero{position:relative;z-index:0;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.who{display:flex;align-items:center;gap:18px;margin-bottom:26px}
+.portrait{margin:0;position:relative;justify-self:end;width:min(100%,440px)}
+.portrait img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid var(--line);box-shadow:0 40px 80px -40px #000,0 0 0 8px rgba(201,162,75,.12)}
+.portrait::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1.5px solid var(--gold);border-radius:22px;z-index:-1}
+.portrait figcaption{position:absolute;left:-22px;bottom:34px;background:var(--navy);border:1px solid var(--gold);border-radius:12px;padding:12px 16px;font-size:14px;color:var(--mute);max-width:230px;line-height:1.4}
+.portrait figcaption b{display:block;font:700 28px/1 "Playfair Display",serif;color:var(--gold)}
+.who{display:block}
+.who .role b{font-family:Cinzel,"Playfair Display",serif;font-size:30px;font-weight:700;letter-spacing:.03em;color:var(--ink);line-height:1.15;margin-bottom:8px}
+.role .rl{display:block;font-weight:600;font-size:16.5px;color:var(--gold2);line-height:1.45}
+.role .loc{display:block;font-size:15px;color:var(--mute);margin-top:4px}
+.photo{width:96px;height:96px;border-radius:50%;flex:none;border:3px solid var(--gold);background:linear-gradient(145deg,#1B3360,#0A1628);display:grid;place-items:center;font:700 32px "Playfair Display",serif;color:var(--gold2);overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.role{color:var(--mute);font-size:15px;line-height:1.45}
+.role b{color:var(--ink);display:block;font-size:17px}
+.hero h1{font-size:clamp(36px,5.2vw,58px)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .sub{color:var(--mute);font-size:17.5px;max-width:560px;margin:22px 0 28px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.badge{border:1px solid var(--gold);color:var(--gold2);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;white-space:nowrap}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--gold)}
+.btn.p{background:var(--gold);color:var(--navy)}
+.btn.p:hover{background:var(--gold2)}
+.btn.s:hover{background:rgba(201,162,75,.12)}
+.btn:focus-visible,.links a:focus-visible{outline:3px solid var(--gold2);outline-offset:2px}
+.road{background:linear-gradient(160deg,#12274A,#0B1A33);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 30px 60px -30px #000}
+.road svg{width:100%;height:auto;display:block}
+.road .cap{display:flex;justify-content:space-between;gap:12px;color:var(--mute);font-size:13.5px;margin-top:8px;flex-wrap:wrap}
+.road .cap b{color:var(--gold2)}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:26px 14px;text-align:center;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font:700 clamp(30px,3.4vw,42px)/1 "Playfair Display",serif;color:var(--gold)}
+.stat span{display:block;color:var(--mute);font-size:14px;margin-top:8px}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,5vw,64px)}
+.about p{color:#D6DCE7}
+.bringwrap{margin-top:48px}.bringwrap .sub-h{margin:0 0 4px}
+.bcols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+@media(max-width:820px){.bcols{grid-template-columns:minmax(0,1fr);gap:0}}
+.bgrp{font-weight:600;color:var(--gold2);font-size:15px;margin:18px 0 10px}
+.bring{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.bring li{padding:14px 16px 14px 44px;background:var(--navy2);border:1px solid var(--line);border-radius:12px;position:relative}
+.bring li::before{content:"";position:absolute;left:17px;top:21px;width:12px;height:12px;border-radius:50%;border:2px solid var(--gold)}
+/* cards */
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:var(--navy);border:1px solid var(--line);border-radius:16px;padding:24px}
+.alt .card{background:#0C1B35}
+.card h3{margin-bottom:14px;font-size:19px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:13.5px;padding:4px 10px;border-radius:6px;background:rgba(201,162,75,.1);color:#E9DDBF}
+/* case study (ivory) */
+.ivory{background:var(--ivory);color:var(--ivink)}
+.ivory .lead{color:#4A5670}
+.ivory .k{color:#9A7420;font-weight:700;font-size:14px;margin-bottom:10px}
+.challenge{background:var(--navy);color:var(--ink);border-radius:16px;padding:26px 28px;margin-bottom:22px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.challenge p{margin:0;color:#D6DCE7}
+.challenge .big{text-align:right}
+.challenge .big b{display:block;font:700 46px/1 "Playfair Display",serif;color:var(--gold)}
+.challenge .big span{font-size:13.5px;color:var(--mute)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.step{background:#fff;border:1px solid #E5DECD;border-radius:14px;padding:20px}
+.step i{font:normal 700 15px Inter;color:#fff;background:var(--navy);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px}
+.step h3{font-size:18px;margin-bottom:8px}
+.step p{font-size:15px;color:#3E4A60;margin:0}
+.proj{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.proj .card{background:#fff;border-color:#E5DECD;color:var(--ivink)}
+.proj .card p{color:#3E4A60;font-size:15.5px}
+.proj .when{color:#9A7420;font-size:14px;font-weight:600;margin-bottom:6px}
+.proj .tags span{background:#F1EAD9;color:#5B4716}
+.gov{display:grid;gap:12px}
+.gp{background:#fff;border:1px solid #E5DECD;border-radius:14px;padding:22px 26px;display:grid;grid-template-columns:210px minmax(0,1fr);gap:8px 28px;align-items:start}
+.gp .cl{color:#9A7420;font-size:13.5px;font-weight:700;margin-bottom:6px}
+.gp h3{color:var(--ivink);margin-bottom:8px}
+.gp p{font-size:15px;color:#3E4A60;margin:0 0 14px}
+.gp .tags{margin-top:12px}
+.gp p{margin:0!important}
+.gp .cl{margin:2px 0 0!important}
+@media(max-width:900px){.gp{grid-template-columns:minmax(0,1fr)}}
+.gp .tags span{background:#F1EAD9;color:#5B4716}
+/* timeline */
+.tl{position:relative;padding-left:34px;display:grid;gap:18px}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),var(--line))}
+.job{position:relative;background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.job::before{content:"";position:absolute;left:-31px;top:24px;width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid var(--gold)}
+.job .hd{display:flex;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;margin-bottom:6px}
+.job h3{font-size:19px}
+.job .d{color:var(--gold2);font-size:14px;font-weight:600;white-space:nowrap}
+.job .co{color:var(--mute);font-size:14.5px;margin-bottom:10px}
+.job ul{margin:0;padding-left:18px;color:#D6DCE7;font-size:15.5px}
+.job li{margin-bottom:4px}
+/* certs */
+.certs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cert{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--navy)}
+.cert .by{color:var(--mute);font-size:14px}
+.cert .dt{color:var(--gold2);font-size:13.5px;font-weight:600;margin-top:10px}
+.cert.main{border-color:var(--gold)}
+.learn{margin-top:26px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 28px;color:#D6DCE7;font-size:15px}
+.learn div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding:8px 0}
+.learn span{color:var(--mute);white-space:nowrap}
+/* recognition */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.award{border-left:3px solid var(--gold);background:var(--navy2);border-radius:0 14px 14px 0;padding:22px 24px}
+.award .dt{color:var(--gold2);font-size:14px;font-weight:600;margin:6px 0 10px}
+.award p{color:#D6DCE7;font-size:15.5px;margin:0}
+blockquote{margin:28px 0 0;padding:28px 30px;border:1px solid var(--line);border-radius:16px;font:600 clamp(19px,2.2vw,23px)/1.45 "Playfair Display",serif}
+blockquote footer{font:500 14.5px Inter,sans-serif;color:var(--mute);margin-top:14px}
+/* edu + contact */
+.edu .card p{color:var(--mute);font-size:15px;margin:6px 0 0}
+.contact{text-align:center}
+.contact .lead{margin:0 auto 30px}
+.contact .btns{justify-content:center}
+.small{color:var(--mute);font-size:14px;margin-top:22px}
+footer.f{border-top:1px solid var(--line);padding:24px max(5vw,18px);color:var(--mute);font-size:14px;text-align:center}
+
+/* TYPE SYSTEM: serif only for display (h1, h2, big figures, quote); everything else Inter */
+h2{margin-bottom:8px}
+.lead{margin-top:0;margin-bottom:32px}
+h3,.card h3,.job h3,.step h3,.award h3{font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:18px;line-height:1.35;letter-spacing:-.005em;margin:0 0 4px;text-wrap:pretty}
+.sub-h{font-size:20px;margin:44px 0 12px}
+.about .sub-h{margin-top:0}
+.by,.co,.when,.cert .by{font-size:14px;line-height:1.45;margin:0}
+.cert .dt,.award .dt{margin:8px 0 0}
+.award .dt{margin-bottom:10px}
+.job .hd{margin-bottom:2px;align-items:baseline}
+.job .co{margin-bottom:12px}
+.proj .when{margin-bottom:4px}
+.proj .card h3{margin-bottom:8px}
+.card h3+.tags{margin-top:10px}
+.step i{margin-bottom:10px}
+.edu .card p{margin-top:4px}
+.ivory .k{margin-bottom:6px}
+/* motion */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(max-width:980px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stat:nth-child(4){border-left:0}.stat:nth-child(n+4){border-top:1px solid var(--line)}.certs{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.hero,.about{grid-template-columns:minmax(0,1fr)}.links{display:none}.portrait{justify-self:center;width:min(100%,380px)}.portrait figcaption{left:10px}.portrait::before{inset:12px -8px -12px 8px}.portrait{width:min(calc(100% - 10px),380px)}.hero>div:first-child{order:2}}
+@media(max-width:600px){.grid4,.steps,.proj,.certs,.two,.learn{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{border-left:0!important;border-top:1px solid var(--line)}.stat:nth-child(-n+2){border-top:0}.stat:nth-child(odd){border-right:1px solid var(--line)}.challenge{grid-template-columns:minmax(0,1fr)}.challenge .big{text-align:left}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">Amr Hefzy</a>
+  <div class="links" id="links">
+    <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certifications">Certifications</a><a href="#recognition">Recognition</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<header class="band" id="top"><div class="wrap hero">
+  <div>
+    <div class="who">
+      <div class="role"><b>Amr Hefzy</b><span class="rl">Senior Business Analyst&nbsp;&nbsp;|&nbsp;&nbsp;Senior ERP/GRP Functional Consultant</span><span class="loc">Riyadh, Saudi Arabia</span></div>
+    </div>
+    <h1>Turning business requirements into systems that <em>go live.</em></h1>
+    <p class="sub">13+ years of full-cycle ERP/GRP implementations across 25+ enterprise and government clients in Saudi Arabia, covering HR, Payroll, Finance and Supply Chain.</p>
+    <div class="badges"><span class="badge">PMP®</span><span class="badge">PMI-ACP®</span><span class="badge">TOGAF® EA Practitioner</span></div>
+    <div class="btns">
+      <a class="btn p" href="#contact">Get in touch</a>
+      <a class="btn s" href="Amr_Hefzy_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </div>
+  <figure class="portrait">
+    <img src="amr-hefzy.jpg" alt="Amr Hefzy" width="640" height="800">
+    <figcaption><b>98%</b> on-time go-live rate</figcaption>
+  </figure>
+</div></header>
+
+<section class="band" style="padding-top:0;padding-bottom:0"><div class="wrap stats" id="stats"></div></section>
+
+<section class="band" id="about"><div class="wrap about">
+  <div class="rv">
+    <h2>About</h2>
+    <p>I help organizations turn complex business requirements into systems that work, and get them live on time.</p>
+    <p>I'm a Senior Business Analyst and ERP/GRP Functional Consultant with 13+ years of full-cycle implementation experience across 25+ enterprise and government clients in Saudi Arabia, on Oracle-based ERP and .NET-based GRP platforms.</p>
+    <p>In recent years my work has centered on government digital transformation: HR, Payroll and Workforce Planning implementations for government entities and universities, aligned with Saudi Civil Service regulations, with integrations to Nafath, Tawakkalna and the Ministry of Human Resources and Social Development (MHRSD) platforms.</p>
+    <p>Earlier, I delivered Oracle-based ERP implementations (ASCON) for 20+ enterprise clients across 7+ sectors, including process improvements that reduced payroll processing time by 30%.</p>
+  </div>
+  <div class="rv">
+<div class="road" aria-label="Delivery path from requirements to go-live">
+    <svg viewBox="0 0 520 380" role="img">
+      <defs>
+        <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#3D5A8C"/><stop offset="1" stop-color="#C9A24B"/></linearGradient>
+        <radialGradient id="glow"><stop offset="0" stop-color="#E3C27A" stop-opacity=".55"/><stop offset="1" stop-color="#E3C27A" stop-opacity="0"/></radialGradient>
+      </defs>
+      <g stroke="#1C3157" stroke-width="1">
+        <line x1="0" y1="95" x2="520" y2="95"/><line x1="0" y1="190" x2="520" y2="190"/><line x1="0" y1="285" x2="520" y2="285"/>
+      </g>
+      <path d="M64 320 C 130 320, 110 250, 170 250 S 230 180, 290 180 S 350 120, 400 110 S 450 70, 470 62" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M64 320 C 130 320, 110 250, 170 250 S 230 180, 290 180 S 350 120, 400 110 S 450 70, 470 62" fill="none" stroke="#E3C27A" stroke-width="5" stroke-linecap="round" stroke-dasharray="30 900" id="pulse"/>
+      <circle cx="470" cy="62" r="46" fill="url(#glow)"/>
+      <g font-family="Inter,sans-serif" font-size="14" fill="#EEF1F6">
+        <circle cx="64" cy="320" r="9" fill="#0A1628" stroke="#6F8AB8" stroke-width="3"/>
+        <text x="64" y="352" text-anchor="middle" fill="#A9B4C7">Requirements</text>
+        <circle cx="170" cy="250" r="9" fill="#0A1628" stroke="#7F93B5" stroke-width="3"/>
+        <text x="170" y="285" text-anchor="middle" fill="#A9B4C7">Fit-Gap</text>
+        <circle cx="290" cy="180" r="9" fill="#0A1628" stroke="#9E9D8C" stroke-width="3"/>
+        <text x="290" y="215" text-anchor="middle" fill="#A9B4C7">Build &amp; Integrate</text>
+        <circle cx="400" cy="110" r="9" fill="#0A1628" stroke="#BBA066" stroke-width="3"/>
+        <text x="390" y="145" text-anchor="middle" fill="#A9B4C7">UAT</text>
+        <circle cx="470" cy="62" r="15" fill="#C9A24B"/>
+        <path d="M463 62 l5 5 l9 -10" stroke="#0A1628" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <text x="470" y="28" text-anchor="middle" font-weight="700" fill="#E3C27A" font-size="16">Go-live</text>
+      </g>
+    </svg>
+    <div class="cap"><span>BRD/SRS · Fit-Gap · Workflows · Integrations · UAT</span><span><b>98%</b> on-time go-live</span></div>
+  </div>
+  </div>
+</div>
+  <div class="wrap bringwrap rv">
+    <h3 class="sub-h">What I bring to a project</h3>
+    <div class="bcols">
+      <div><div class="bgrp">As a functional consultant</div><ul class="bring" id="bringFC"></ul></div>
+      <div><div class="bgrp">As a business analyst</div><ul class="bring" id="bringBA"></ul></div>
+    </div>
+  </div></section>
+
+<section class="band alt" id="expertise"><div class="wrap">
+  <h2>Expertise</h2>
+  <p class="lead">Where business analysis, delivery management and ERP/GRP domain knowledge meet.</p>
+  <div class="grid4" id="skills"></div>
+</div></section>
+
+<section class="band ivory" id="projects"><div class="wrap">
+  <div class="k">Featured case study</div>
+  <h2>Workforce Data Readiness at Najran University</h2>
+  <p class="lead">How we enabled Najran University to meet MHRSD workforce planning requirements by moving data collection for 2,600 employees and faculty members into the self-service portal.</p>
+  <div class="challenge rv">
+    <p><b class="gold">The challenge.</b> MHRSD's workforce planning framework (top-down and bottom-up analysis, 3-year headcount targets) depends on complete, accurate employee data across 6 data templates, much of which the HR system did not yet hold.</p>
+    <div class="big"><b>2,600</b><span>employees and faculty</span></div>
+  </div>
+  <div class="steps" id="steps"></div>
+  <h3 class="sub-h">More government projects</h3>
+  <div class="gov" id="gov"></div>
+  <h3 class="sub-h">Implementation programs</h3>
+  <div class="proj" id="proj" style="margin-top:0"></div>
+</div></section>
+
+<section class="band" id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <p class="lead">From junior implementer in Alexandria, to Senior Oracle Systems Consultant at ASCON, one of the largest Oracle partners in Riyadh delivering local Oracle-based ERP solutions to the private sector, to leading government GRP implementations at HASIB.</p>
+  <div class="tl" id="jobs"></div>
+</div></section>
+
+<section class="band alt" id="certifications"><div class="wrap">
+  <h2>Certifications</h2>
+  <p class="lead">Project management, agile delivery and enterprise architecture, on top of an accounting foundation.</p>
+  <div class="certs" id="certs"></div>
+  <h3 class="sub-h">Professional development courses</h3>
+  <div class="learn" id="learn"></div>
+</div></section>
+
+<section class="band" id="recognition"><div class="wrap">
+  <h2>Recognition</h2>
+  <p class="lead">Acknowledged by the clients and the company I deliver for.</p>
+  <div class="two" id="awards"></div>
+  <blockquote class="rv">“An outstanding ERP Consultant and a fantastic colleague. I witnessed firsthand strong analytical skills and the ability to successfully drive ERP implementations.”
+    <footer>Tarek Zidan · Product Manager, Functional Consultant &amp; Senior Business Analyst · LinkedIn recommendation</footer>
+  </blockquote>
+</div></section>
+
+<section class="band alt edu"><div class="wrap">
+  <h2>Education &amp; languages</h2>
+  <div class="grid4" style="margin-top:24px">
+    <div class="card"><h3>B.Com, Accounting</h3><p>Alexandria University · 2006–2010</p><p>The foundation that later shaped my Finance and Payroll implementations.</p></div>
+    <div class="card"><h3>Diploma, Computer Science &amp; Technology</h3><p>Institute of Computer Science and Technology · 2019–2021</p></div>
+    <div class="card"><h3>Arabic</h3><p>Native</p></div>
+    <div class="card"><h3>English</h3><p>Professional working proficiency</p></div>
+  </div>
+</div></section>
+
+<section class="band contact" id="contact"><div class="wrap">
+  <h2>Let's talk</h2>
+  <p class="lead">Open to conversations on ERP/GRP implementations, HR &amp; Payroll transformation, and government digital projects.</p>
+  <div class="btns">
+    <a class="btn p" href="https://www.linkedin.com/in/amrhefzy/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    <a class="btn s" href="mailto:amrhefzy88@gmail.com">amrhefzy88@gmail.com</a>
+  </div>
+  <p class="small">Riyadh, Saudi Arabia</p>
+</div></section>
+
+<footer class="f">© <span id="yr">2026</span> Amr Hefzy</footer>
+
+<script>
+{
+const $=id=>document.getElementById(id);
+const stats=[["13+","years of implementation"],["25+","enterprise & government clients"],["35+","UAT cycles managed"],["200+","functional gaps resolved"],["200+","end users trained"],["98%","on-time go-live rate"]];
+$('stats').innerHTML=stats.map(s=>`<div class="stat"><b>${s[0]}</b><span>${s[1]}</span></div>`).join('');
+
+const bringFC=["Full-cycle ERP/GRP implementation, from requirements through go-live and stabilization","Module setup and configuration across HR, Payroll, Finance and SCM","Approval workflows, organizational hierarchies and system parameters","Data migration, mapping and SQL-based validation","End-user training, UAT execution and go-live support"];
+const bringBA=["Requirements engineering: BRD, SRS and functional specifications","Fit-gap analysis, business process and workflow design","UAT planning and management","Delivery across traditional, Agile and hybrid models","Alignment between business stakeholders and technical teams"];
+const li=a=>a.map(b=>`<li>${b}</li>`).join('');
+$('bringFC').innerHTML=li(bringFC);$('bringBA').innerHTML=li(bringBA);
+
+const skills=[
+ ["Business Analysis & Enterprise Architecture",["Requirements Engineering","BRD/SRS","Fit-Gap Analysis","Solution Design","Workflow Design","Process Optimization","TOGAF® ADM","Business Architecture","Business-IT Alignment"]],
+ ["Project & Delivery Management",["PMP® & PMI-ACP® Practices","Agile & Hybrid Delivery","Scrum","Backlog Management","Full SDLC","UAT Management","Go-Live Support","Change Management","Stakeholder Engagement"]],
+ ["ERP/GRP & Domain Expertise",["HR & Payroll (HRIS)","Workforce Planning","Employee Self-Service","Finance (GL/AP/AR/FA)","Supply Chain (SCM)","Saudi Civil Service Regulations","Government Digital Transformation","Vision 2030 Initiatives"]],
+ ["Integration & Technical",["Oracle-based ERP","​.NET GRP Systems","API Integration","Nafath","Tawakkalna","SSO (CAS)","MHRSD Platforms","GOSI · MUDAD · WPS","Data Migration & Mapping","SQL & Data Analysis","AI Chatbot Integration"]]
+];
+$('skills').innerHTML=skills.map(s=>`<div class="card rv"><h3>${s[0]}</h3><div class="tags">${s[1].map(t=>`<span>${t}</span>`).join('')}</div></div>`).join('');
+
+const steps=[
+ ["Requirements & Data Mapping","Mapped the 6 templates into 63 fields, each with its own rules: mandatory, visible, source, editable and input type."],
+ ["Mandatory Update at Login","The data page opens on login; daily transactions stay locked until every mandatory field is complete."],
+ ["Four-Tab Form, Save & Resume","Data split into 4 tabs, each saved on its own, so employees can complete it in stages."],
+ ["System Data First","47 fields pre-filled from the HR system (27 read-only, 20 editable); employees enter only 14 new fields."],
+ ["Standardized Input","19 drop-down lists and format rules (mobile, email, dates) to keep entries consistent."],
+ ["Tracking & Reporting","Daily update report, completion indicator, statistics, and a job-tasks report for workforce planning."]
+];
+$('steps').innerHTML=steps.map((s,i)=>`<div class="step rv"><i>${i+1}</i><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
+
+const gov=[
+ ["Najran University","University-wide Data Update & Restructuring","The larger of the two Najran data projects. We first updated all university data, including master data, for about 2,600 faculty and staff, then restructured it through old-to-new data mapping, adopted the Saudi Unified Classification for specializations, and integrated with the Ministry of Education's Asas 2 system.",["Data Migration & Mapping","Master Data","Asas 2","Saudi Unified Classification"]],
+ ["Najran University","Nafath & Single Sign-On (CAS) Integration","Integrated the university's systems with Nafath, the national digital identity, and with the central single sign-on (CAS), giving staff one secure login.",["Nafath","SSO / CAS","Integration"]],
+ ["Najran University","Self-Service Portal on Tawakkalna","Brought a set of self-service portal services to the Tawakkalna app, so faculty, staff and all university affiliates can use them directly from Tawakkalna.",["Tawakkalna","ESS","API Integration"]],
+ ["Northern Border University","Specializations Master Data Rebuild","Rebuilt the specializations master data according to the Saudi Unified Classification of Specializations.",["Master Data","Saudi Unified Classification"]],
+ ["Northern Border University","AI Chatbot on the Self-Service Portal","An interactive AI chatbot that answers how-to questions on the ERP and the portal like a live user manual, and answers questions on Civil Service regulations and MHRSD rules.",["AI Chatbot","ESS","Civil Service Regulations"]],
+ ["Government entity","Individuals Portal Integration","Integrated a government individuals portal with specialized systems within the GRP suite.",["GRP","Portal Integration","Government"]]
+];
+$('gov').innerHTML=gov.map(g=>`<div class="gp rv"><div class="cl">${g[0]}</div><div><h3>${g[1]}</h3><p>${g[2]}</p><div class="tags">${g[3].map(t=>`<span>${t}</span>`).join('')}</div></div></div>`).join('');
+
+const proj=[
+ ["HASIB — GRP (.NET) Implementation & Integration","Aug 2023 – Present","HR, Payroll, Finance and SCM implementations for government entities and universities: 15+ UAT cycles for 4 government clients, 30+ stakeholders across 3 ministries, and integrations with Nafath, Tawakkalna and MHRSD platforms.",["Government Digital Transformation","APIs","Saudi Civil Service"]],
+ ["ASCON ERP — Oracle ERP Implementation","Jan 2013 – Jul 2023","Full-cycle Oracle-based ERP implementations for 20+ enterprise clients across 7+ sectors, including Construction, Car Rental, Medical Devices, Manufacturing, Real Estate and Automotive.",["12+ modules","50+ workflows","UAT Management"]]
+];
+$('proj').innerHTML=proj.map(p=>`<div class="card rv"><div class="when">${p[1]}</div><h3>${p[0]}</h3><p>${p[2]}</p><div class="tags">${p[3].map(t=>`<span>${t}</span>`).join('')}</div></div>`).join('');
+
+const jobs=[
+ ["Senior ERP/GRP Functional Consultant | Business Analyst","Aug 2024 – Present","Applied Computer Services Company (HASIB) · Riyadh",["Lead GRP (.NET) HR & Payroll implementations for government entities and universities, aligned with Saudi Civil Service regulations.","Managed 15+ UAT cycles for 4 government clients, resolving 200+ functional gaps with a 98% on-time go-live rate.","Delivered workforce planning data readiness for Najran University across 6 MHRSD templates.","Delivered integrations with Nafath, single sign-on (CAS), Tawakkalna, MHRSD platforms and a government individuals portal.","Delivered an AI chatbot on the self-service portal for Northern Border University, covering system how-tos and Civil Service regulations.","Led Najran University's university-wide data update and restructuring for about 2,600 faculty and staff, including old-to-new data mapping and integration with the Ministry of Education's Asas 2 system.","Trained 200+ end users across 4 government entities."]],
+ ["ERP/GRP Functional Consultant","Aug 2023 – Aug 2024","Applied Computer Services Company (HASIB) · Riyadh",["Led GRP (.NET) implementations across HR, Finance and SCM for 3+ government clients, from requirements to go-live.","Analyzed and documented 100+ requirements into detailed functional specifications.","Configured 20+ system parameters, approval workflows and organizational hierarchies; resolved 80+ issues during rollout."]],
+ ["Senior Oracle Systems Consultant","Jun 2019 – Jul 2023","ASCON ERP · Riyadh · Oracle partner, local Oracle-based ERP",["Implemented Oracle-based ERP modules: HR, Payroll, Finance, SCM, Projects and Maintenance.","Improved HR and Finance processes, reducing payroll processing time by 30%.","Managed 20+ UAT cycles for 10 enterprise clients, including training and go-live."]],
+ ["Senior Oracle ERP Implementer","Mar 2015 – Jun 2019","ASCON ERP · Saudi Arabia",["Delivered full-cycle implementations for 20+ enterprise clients across 7+ sectors.","Implemented 12+ modules including GL/AP/AR/FA, HR, Payroll, SCM and Projects.","Designed 50+ business workflows and functional specifications."]],
+ ["Junior Oracle ERP Implementer","Jan 2013 – Mar 2015","ASCON ERP · Alexandria, Egypt",["Supported implementations for 11+ clients in construction and car rental: requirements, configuration, UAT and go-live."]]
+];
+$('jobs').innerHTML=jobs.map(j=>`<div class="job rv"><div class="hd"><h3>${j[0]}</h3><span class="d">${j[1]}</span></div><div class="co">${j[2]}</div><ul>${j[3].map(l=>`<li>${l}</li>`).join('')}</ul></div>`).join('');
+
+const certs=[
+ ["TOGAF® Enterprise Architecture Practitioner","The Open Group","Nov 2026",1],
+ ["TOGAF® Enterprise Architecture Foundation","The Open Group","Oct 2026",1],
+ ["PMI Agile Certified Practitioner (PMI-ACP)®","Project Management Institute","Aug 2026",1],
+ ["Project Management Professional (PMP)®","Project Management Institute · Above Target in all 3 domains","Jun 2026",1],
+ ["Business Systems Analysis","Reqmaster","Dec 2024",0],
+ ["Financial Accountant Diploma","EAAC Group for Training & Consultancy","Mar 2011",0]
+];
+$('certs').innerHTML=certs.map(c=>`<div class="cert rv${c[3]?' main':''}"><h3>${c[0]}</h3><div class="by">${c[1]}</div><div class="dt">${c[2]}</div></div>`).join('');
+
+const learn=[["Generative AI Overview for Project Managers","Oct 2026"],["PMI® Agile Metrics for Success","Sep 2026"],["Talking to AI: Prompt Engineering for Project Managers","Aug 2026"],["Practical Application of Gen AI for Project Managers","Aug 2026"],["PMI® Essentials: M.O.R.E. in Action","Jul 2026"],["AI in Agile Delivery","Jul 2026"]];
+$('learn').innerHTML=learn.map(l=>`<div>${l[0]}<span>PMI · ${l[1]}</span></div>`).join('');
+
+const awards=[
+ ["Honored by Najran University","Sep 2024 · General Administration of Human Resources","Official recognition for the successful implementation of the university's Human Resources Systems project, ensuring data accuracy, system readiness and a seamless go-live."],
+ ["Outstanding Participation Award","Dec 2025 · King Khalid University Excellence Forum","Recognized by HASIB for representing the company at the Institutional Excellence Forum and contributing to government digital transformation initiatives."]
+];
+$('awards').innerHTML=awards.map(a=>`<div class="award rv"><h3>${a[0]}</h3><div class="dt">${a[1]}</div><p>${a[2]}</p></div>`).join('');
+
+$('yr').textContent=new Date().getFullYear();
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+const navLinks=[...document.querySelectorAll('#links a')];
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-45% 0px -50% 0px'});
+navLinks.forEach(a=>{const s=document.querySelector(a.getAttribute('href'));if(s)spy.observe(s)});
+
+const p=$('pulse');
+if(p&&!matchMedia('(prefers-reduced-motion: reduce)').matches){let o=0;const run=()=>{o=(o-4)%930;p.setAttribute('stroke-dashoffset',o);requestAnimationFrame(run)};run()}else if(p){p.remove()}
+}
+</script>
+</body>
+</html>
