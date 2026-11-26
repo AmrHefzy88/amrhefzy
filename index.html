@@ -174,6 +174,26 @@ blockquote footer{font:500 14.5px Inter,sans-serif;color:var(--mute);margin-top:
 .mail{color:#B9C3D4;font-size:15px;margin-top:18px}
 .mail b{color:#fff;font-weight:600}
 footer.f{background:var(--navy);border-top:1px solid #1D2D48;padding:22px max(5vw,18px);color:#8B97AD;font-size:14px;text-align:center}
+
+/* ===== identity motif (shared structure) ===== */
+.band>.wrap{position:relative;z-index:1}
+.band::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0}
+header.band::before{-webkit-mask-image:linear-gradient(100deg,transparent 42%,#000 78%);mask-image:linear-gradient(100deg,transparent 42%,#000 78%)}
+.band.alt::before{-webkit-mask-image:radial-gradient(ellipse 55% 70% at 100% 0,#000,transparent 70%);mask-image:radial-gradient(ellipse 55% 70% at 100% 0,#000,transparent 70%)}
+.band:not(.alt):not(header):not(.contact)::before{-webkit-mask-image:radial-gradient(ellipse 45% 60% at 0 100%,#000,transparent 70%);mask-image:radial-gradient(ellipse 45% 60% at 0 100%,#000,transparent 70%)}
+.contact::before{-webkit-mask-image:radial-gradient(ellipse 40% 90% at 0 50%,#000,transparent 70%),radial-gradient(ellipse 40% 90% at 100% 50%,#000,transparent 70%);mask-image:radial-gradient(ellipse 40% 90% at 0 50%,#000,transparent 70%),radial-gradient(ellipse 40% 90% at 100% 50%,#000,transparent 70%)}
+.card,.gp,.step,.cert,.award,.job{position:relative}
+.card::after,.gp::after,.step::after,.cert::after,.award::after,.job::after{content:"";position:absolute;right:0;bottom:0;width:120px;height:80px;pointer-events:none;border-bottom-right-radius:14px;-webkit-mask-image:radial-gradient(circle at 100% 100%,#000,transparent 75%);mask-image:radial-gradient(circle at 100% 100%,#000,transparent 75%)}
+section h2::after{content:"";display:block;height:8px;width:96px;margin:14px 0 10px}
+.contact h2::after{margin:14px auto 10px}
+.road{position:relative;z-index:1}
+
+/* D: ERP data grid */
+.band::before,.card::after,.gp::after,.step::after,.cert::after,.award::after,.job::after{background-image:linear-gradient(to right,rgba(30,111,217,.17) 1px,transparent 1px),linear-gradient(to bottom,rgba(30,111,217,.17) 1px,transparent 1px);background-size:56px 26px}
+header.band::before{background-image:linear-gradient(rgba(30,111,217,.09),rgba(30,111,217,.09)),linear-gradient(rgba(201,162,75,.22),rgba(201,162,75,.22)),linear-gradient(rgba(30,111,217,.06),rgba(30,111,217,.06)),linear-gradient(to right,rgba(30,111,217,.17) 1px,transparent 1px),linear-gradient(to bottom,rgba(30,111,217,.17) 1px,transparent 1px);background-size:56px 26px,56px 26px,112px 26px,56px 26px,56px 26px;background-position:785px 79px,1009px 495px,1121px 183px,0 0,0 0;background-repeat:no-repeat,no-repeat,no-repeat,repeat,repeat}
+.band.alt::before{background-image:linear-gradient(rgba(201,162,75,.2),rgba(201,162,75,.2)),linear-gradient(to right,rgba(30,111,217,.17) 1px,transparent 1px),linear-gradient(to bottom,rgba(30,111,217,.17) 1px,transparent 1px);background-size:56px 26px,56px 26px,56px 26px;background-position:right 113px top 53px,0 0,0 0;background-repeat:no-repeat,repeat,repeat}
+.contact::before{background-image:linear-gradient(to right,rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.09) 1px,transparent 1px);background-size:56px 26px}
+section h2::after{background:linear-gradient(rgba(30,111,217,.45),rgba(30,111,217,.45)) 0 1px/26px 6px no-repeat,linear-gradient(rgba(30,111,217,.3),rgba(30,111,217,.3)) 31px 1px/14px 6px no-repeat,linear-gradient(#C9A24B,#C9A24B) 50px 1px/6px 6px no-repeat}
 /* motion */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--dl,0s)}
 .rv.in{opacity:1;transform:none}
@@ -193,7 +213,6 @@ footer.f{background:var(--navy);border-top:1px solid #1D2D48;padding:22px max(5v
 </div></nav>
 
 <header class="band" id="top">
-  <svg class="net" id="net" aria-hidden="true"></svg>
   <div class="wrap hero">
     <div>
       <div class="who enter">
@@ -396,29 +415,6 @@ const awards=[
 $('awards').innerHTML=awards.map((a,i)=>`<div class="award lift rv" ${dl(i)}><h3>${a[0]}</h3><div class="dt">${a[1]}</div><p>${a[2]}</p></div>`).join('');
 
 $('yr').textContent=new Date().getFullYear();
-
-/* integration network behind the hero */
-const net=$('net');
-const drawNet=()=>{
-  const W=net.clientWidth,H=net.clientHeight;if(!W||!H)return;
-  const sm=W<860;
-  const P=sm?[[.08,.06,'ERP'],[.5,.03,''],[.92,.08,'Nafath'],[.7,.2,''],[.95,.32,'MHRSD'],[.12,.3,'']]
-           :[[.6,.05,'ERP'],[.8,.03,'Portal'],[.98,.12,'Nafath'],[.99,.45,''],[.98,.92,'MHRSD'],[.75,.97,''],[.6,.9,'Tawakkalna'],[.575,.62,'GOSI'],[.7,.02,'']];
-  const hub=sm?[.5,.16]:[.62,.3];
-  const E=sm?[[0,5],[1,3],[2,3],[3,4]]:[[0,8],[8,1],[2,3],[3,4],[4,5],[5,6],[6,7]];
-  const pt=p=>[p[0]*W,p[1]*H];
-  const [hx,hy]=pt(hub);
-  let s='',d=0;
-  const line=(a,b)=>{const L=Math.hypot(b[0]-a[0],b[1]-a[1]);s+=`<path class="ln" style="--len:${L.toFixed(0)};animation-delay:${(d+=.12).toFixed(2)}s" d="M${a[0].toFixed(1)} ${a[1].toFixed(1)} L${b[0].toFixed(1)} ${b[1].toFixed(1)}"/>`};
-  P.forEach(p=>{if(p[2])line([hx,hy],pt(p))});
-  E.forEach(e=>line(pt(P[e[0]]),pt(P[e[1]])));
-  P.forEach((p,i)=>{const [x,y]=pt(p);s+=`<circle class="nd" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${p[2]?5:3.5}" style="animation-delay:${(1+i*.1).toFixed(2)}s"/>`;
-    if(p[2]){const r=x>W*.8;s+=`<text x="${(x+(r?-10:10)).toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="${r?'end':'start'}" style="animation-delay:${(1.3+i*.1).toFixed(2)}s">${p[2]}</text>`;
-      s+=`<circle class="pl" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="9" style="animation-delay:${(2+i*.5).toFixed(2)}s"/>`}});
-  s+=`<circle class="hub" cx="${hx.toFixed(1)}" cy="${hy.toFixed(1)}" r="8" style="animation-delay:.9s"/>`;
-  net.innerHTML=s;
-};
-let nw=0;const nro=new ResizeObserver(()=>{if(Math.abs(net.clientWidth-nw)>40){nw=net.clientWidth;drawNet()}});nro.observe(net);
 
 /* road path length */
 const rp=$('roadPath');if(rp)rp.style.setProperty('--len',Math.ceil(rp.getTotalLength()));
