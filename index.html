@@ -158,7 +158,11 @@ header.band{overflow:hidden;padding-top:clamp(40px,5vw,72px)}
 .award p{color:var(--mute);font-size:15.5px;margin:0}
 blockquote{margin:28px 0 0;padding:30px 32px;background:var(--bluebg);border-radius:16px;font:600 clamp(19px,2.2vw,23px)/1.45 "Playfair Display",serif;color:var(--navy)}
 blockquote footer{font:500 14.5px Inter,sans-serif;color:var(--mute);margin-top:14px}
-.edu .card p{color:var(--mute);font-size:15px;margin:4px 0 0}
+.edus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:26px}
+.edus .card{padding:28px}
+.edus .by{color:var(--blued);font-weight:600;font-size:15px;margin:2px 0 12px}
+.edus p{color:var(--mute);font-size:15.5px;margin:0}
+@media(max-width:700px){.edus{grid-template-columns:minmax(0,1fr)}}
 /* contact */
 .contact{background:var(--navy);color:#fff;text-align:center;overflow:hidden}
 .contact h2{color:#fff}
@@ -330,12 +334,10 @@ section h2::after{background:linear-gradient(rgba(30,111,217,.45),rgba(30,111,21
 </div></section>
 
 <section class="band alt edu"><div class="wrap">
-  <h2 class="rv">Education &amp; languages</h2>
-  <div class="grid4" style="margin-top:26px">
-    <div class="card lift rv"><h3>B.Com, Accounting</h3><p>Alexandria University · 2006–2010</p><p>The foundation that later shaped my Finance and Payroll implementations.</p></div>
-    <div class="card lift rv" style="--dl:.08s"><h3>Diploma, Computer Science &amp; Technology</h3><p>Institute of Computer Science and Technology · 2019–2021</p></div>
-    <div class="card lift rv" style="--dl:.16s"><h3>Arabic</h3><p>Native</p></div>
-    <div class="card lift rv" style="--dl:.24s"><h3>English</h3><p>Professional working proficiency</p></div>
+  <h2 class="rv">Education</h2>
+  <div class="edus">
+    <div class="card lift rv"><div class="when">2006 – 2010</div><h3>Bachelor of Commerce (B.Com), Accounting</h3><div class="by">Alexandria University</div><p>Accounting foundation in financial principles, cost control and auditing, which later shaped my work on Finance and Payroll ERP implementations.</p></div>
+    <div class="card lift rv" style="--dl:.08s"><div class="when">2019 – 2021</div><h3>Diploma, Computer Science &amp; Technology</h3><div class="by">Institute of Computer Science and Technology</div><p>IT fundamentals, data processing and programming basics.</p></div>
   </div>
 </div></section>
 
