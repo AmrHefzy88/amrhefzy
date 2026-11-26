@@ -182,18 +182,31 @@ header.band::before{-webkit-mask-image:linear-gradient(100deg,transparent 42%,#0
 .band.alt::before{-webkit-mask-image:radial-gradient(ellipse 55% 70% at 100% 0,#000,transparent 70%);mask-image:radial-gradient(ellipse 55% 70% at 100% 0,#000,transparent 70%)}
 .band:not(.alt):not(header):not(.contact)::before{-webkit-mask-image:radial-gradient(ellipse 45% 60% at 0 100%,#000,transparent 70%);mask-image:radial-gradient(ellipse 45% 60% at 0 100%,#000,transparent 70%)}
 .contact::before{-webkit-mask-image:radial-gradient(ellipse 40% 90% at 0 50%,#000,transparent 70%),radial-gradient(ellipse 40% 90% at 100% 50%,#000,transparent 70%);mask-image:radial-gradient(ellipse 40% 90% at 0 50%,#000,transparent 70%),radial-gradient(ellipse 40% 90% at 100% 50%,#000,transparent 70%)}
-.card,.gp,.step,.cert,.award,.job{position:relative}
-.card::after,.gp::after,.step::after,.cert::after,.award::after,.job::after{content:"";position:absolute;right:0;bottom:0;width:120px;height:80px;pointer-events:none;border-bottom-right-radius:14px;-webkit-mask-image:radial-gradient(circle at 100% 100%,#000,transparent 75%);mask-image:radial-gradient(circle at 100% 100%,#000,transparent 75%)}
+.card,.gp,.step,.cert,.award,.job,.rec{position:relative}
+.card::after,.gp::after,.step::after,.cert::after,.award::after,.job::after,.rec::after{content:"";position:absolute;right:0;bottom:0;width:120px;height:80px;pointer-events:none;border-bottom-right-radius:14px;-webkit-mask-image:radial-gradient(circle at 100% 100%,#000,transparent 75%);mask-image:radial-gradient(circle at 100% 100%,#000,transparent 75%)}
 section h2::after{content:"";display:block;height:8px;width:96px;margin:14px 0 10px}
 .contact h2::after{margin:14px auto 10px}
 .road{position:relative;z-index:1}
 
 /* D: ERP data grid */
-.band::before,.card::after,.gp::after,.step::after,.cert::after,.award::after,.job::after{background-image:linear-gradient(to right,rgba(30,111,217,.17) 1px,transparent 1px),linear-gradient(to bottom,rgba(30,111,217,.17) 1px,transparent 1px);background-size:56px 26px}
+.band::before,.card::after,.gp::after,.step::after,.cert::after,.award::after,.job::after,.rec::after{background-image:linear-gradient(to right,rgba(30,111,217,.17) 1px,transparent 1px),linear-gradient(to bottom,rgba(30,111,217,.17) 1px,transparent 1px);background-size:56px 26px}
 header.band::before{background-image:linear-gradient(rgba(30,111,217,.09),rgba(30,111,217,.09)),linear-gradient(rgba(201,162,75,.22),rgba(201,162,75,.22)),linear-gradient(rgba(30,111,217,.06),rgba(30,111,217,.06)),linear-gradient(to right,rgba(30,111,217,.17) 1px,transparent 1px),linear-gradient(to bottom,rgba(30,111,217,.17) 1px,transparent 1px);background-size:56px 26px,56px 26px,112px 26px,56px 26px,56px 26px;background-position:785px 79px,1009px 495px,1121px 183px,0 0,0 0;background-repeat:no-repeat,no-repeat,no-repeat,repeat,repeat}
 .band.alt::before{background-image:linear-gradient(rgba(201,162,75,.2),rgba(201,162,75,.2)),linear-gradient(to right,rgba(30,111,217,.17) 1px,transparent 1px),linear-gradient(to bottom,rgba(30,111,217,.17) 1px,transparent 1px);background-size:56px 26px,56px 26px,56px 26px;background-position:right 113px top 53px,0 0,0 0;background-repeat:no-repeat,repeat,repeat}
 .contact::before{background-image:linear-gradient(to right,rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.09) 1px,transparent 1px);background-size:56px 26px}
 section h2::after{background:linear-gradient(rgba(30,111,217,.45),rgba(30,111,217,.45)) 0 1px/26px 6px no-repeat,linear-gradient(rgba(30,111,217,.3),rgba(30,111,217,.3)) 31px 1px/14px 6px no-repeat,linear-gradient(#C9A24B,#C9A24B) 50px 1px/6px 6px no-repeat}
+/* recommendations */
+.recs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.rec{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 28px 24px;display:flex;flex-direction:column}
+.rec.ft{grid-column:1/-1;background:var(--soft)}
+.rec .q{font:700 54px/0.6 "Playfair Display",serif;color:var(--gold);height:26px;margin-bottom:8px}
+.rec .tx p{font-size:16px;line-height:1.7;color:#2C3A52;margin:0 0 12px}
+.rec.ft .tx{columns:2;column-gap:36px;margin-bottom:14px!important}
+.rec.ft .tx p{break-inside:avoid}
+.rec .by{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.rec .av{width:42px;height:42px;border-radius:50%;background:var(--bluebg);color:var(--blued);display:grid;place-items:center;font-weight:700;font-size:14px;flex:none}
+.rec .nm{font-weight:600;color:var(--navy);font-size:15.5px}
+.rec .rl{font-size:13.5px;color:var(--mute);line-height:1.4}
+@media(max-width:860px){.recs{grid-template-columns:minmax(0,1fr)}.rec.ft .tx{columns:1}}
 /* motion */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;transition-delay:var(--dl,0s)}
 .rv.in{opacity:1;transform:none}
@@ -208,7 +221,7 @@ section h2::after{background:linear-gradient(rgba(30,111,217,.45),rgba(30,111,21
 <nav id="nav"><div class="wrap">
   <a class="logo" href="#top">Amr Hefzy</a>
   <div class="links" id="links">
-    <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certifications">Certifications</a><a href="#recognition">Recognition</a><a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certifications">Certifications</a><a href="#recognition">Recognition</a><a href="#recommendations">Recommendations</a><a href="#contact">Contact</a>
   </div>
 </div></nav>
 
@@ -308,12 +321,15 @@ section h2::after{background:linear-gradient(rgba(30,111,217,.45),rgba(30,111,21
   <h2 class="rv">Recognition</h2>
   <p class="lead rv">Acknowledged by the clients and the company I deliver for.</p>
   <div class="two" id="awards"></div>
-  <blockquote class="rv">“I highly recommend him.”
-    <footer>Yehea Ahmed · Senior Sales Account Manager, Dynamic Netsoft · Worked with Amr on the same team · LinkedIn recommendation</footer>
-  </blockquote>
 </div></section>
 
-<section class="band edu"><div class="wrap">
+<section class="band" id="recommendations"><div class="wrap">
+  <h2 class="rv">What colleagues say</h2>
+  <p class="lead rv">Recommendations from people I've worked with, from my LinkedIn profile.</p>
+  <div class="recs" id="recs"></div>
+</div></section>
+
+<section class="band alt edu"><div class="wrap">
   <h2 class="rv">Education &amp; languages</h2>
   <div class="grid4" style="margin-top:26px">
     <div class="card lift rv"><h3>B.Com, Accounting</h3><p>Alexandria University · 2006–2010</p><p>The foundation that later shaped my Finance and Payroll implementations.</p></div>
@@ -413,6 +429,14 @@ const awards=[
  ["Outstanding Participation Award","Dec 2025 · King Khalid University Excellence Forum","Recognized by HASIB for representing the company at the Institutional Excellence Forum and contributing to government digital transformation initiatives."]
 ];
 $('awards').innerHTML=awards.map((a,i)=>`<div class="award lift rv" ${dl(i)}><h3>${a[0]}</h3><div class="dt">${a[1]}</div><p>${a[2]}</p></div>`).join('');
+
+const recs=[
+ {n:"Ibrahem Mousa",r:"Project Manager · ERP Solutions",w:"Worked with Amr at HASIB on different teams",f:1,t:["I had the pleasure of working with Amr at Hasib for over three years. Although we were on different teams, our work brought us together often, and I always counted on him as an ERP/GRP Functional Consultant.","Amr is truly dedicated to his work and holds himself to the highest professional standards. He leaves nothing to chance: every detail is planned, checked, and delivered properly. Just as important, he keeps his word. When Amr commits to a date or a promise, you can be sure it will be met.","He is also constantly investing in his own growth, always learning and raising the bar for himself. Beyond his professional strength, Amr creates a warm, friendly atmosphere wherever he works, and people naturally gather around him. He is a real leader in every sense of the word.","Amr would be a gain and a genuine addition to any team or company he joins. I recommend him wholeheartedly."]},
+ {n:"Ramy Elnaghy",r:"Chief Technology Officer · Digital Healthcare Solutions Arabia",w:"Worked with Amr on different teams",t:["Amr is a hardworking, dedicated, and ambitious person who always strives to improve himself. I truly admire his commitment, positive attitude, and willingness to take on new challenges. Anyone would be lucky to have him on their team."]},
+ {n:"Tarek Zidan",r:"Product Manager, Functional Consultant & Senior Business Analyst",w:"Senior colleague in the same company",t:["Amr Hefzy is an outstanding ERP Consultant and a fantastic colleague. Having worked together in the same company, I witnessed firsthand his strong analytical skills and ability to successfully drive ERP implementations. He is highly collaborative, technically sharp, and always ready to support the team. I give him my highest recommendation."]}
+];
+const ini=n=>n.split(' ').map(x=>x[0]).slice(0,2).join('');
+$('recs').innerHTML=recs.map((x,i)=>`<figure class="rec lift rv${x.f?' ft':''}" style="margin:0;--dl:${(i%2)*0.08}s"><div class="q" aria-hidden="true">“</div><blockquote class="tx" style="margin:0;padding:0;background:none;font:inherit">${x.t.map(p=>`<p>${p}</p>`).join('')}</blockquote><figcaption class="by"><span class="av">${ini(x.n)}</span><span><span class="nm">${x.n}</span><br><span class="rl">${x.r} · ${x.w}</span></span></figcaption></figure>`).join('');
 
 $('yr').textContent=new Date().getFullYear();
 
